@@ -1,0 +1,139 @@
+*
+{
+    --text:  rgb(219, 219, 219);
+
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    font-weight: 100;
+}
+
+body
+{
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+}
+
+header
+{
+    padding: 40px 5px 20px 5px;
+}
+
+.search
+{
+    display: flex;
+    justify-content: center;
+}
+
+.search button
+{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--text);
+    font-size: 20px;
+    color: rgb(189, 189, 189);
+    cursor: pointer;
+}
+
+.search input
+{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid var(--text);
+    padding: 5px;
+    transition: padding .2s ease-in-out;
+    font-size: 20px;
+}
+
+.search input::placeholder
+{
+    color: rgb(189, 189, 189);
+}
+
+.search input:focus
+{
+    padding-bottom: 9px;
+    border-bottom: 2px solid white;
+}
+
+.search input:focus + button
+{
+    border-bottom: 2px solid white;
+}
+
+.search input::-webkit-search-cancel-button
+{
+    display: none;
+}
+
+main
+{
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    border-radius: 15px;
+    flex-direction: column;
+    border: 2px solid white;
+    width: 400px;
+    background: linear-gradient(233deg, rgba(95,126,138,0.8), rgba(73,225,30,0.6));
+}
+
+main
+{
+    padding: 30px 5px 10px 5px;
+}
+
+main > .city
+{
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+main > .temperature
+{
+    font-size: 60px;
+}
+
+main > .temperature-felt
+{
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+main > .wind, main > .humidity, main > .pressure
+{
+    padding: 20px 5px 10px 5px; 
+    font-size: 28px;
+    border-bottom: 1px solid white;
+    width: 40%;
+    margin: auto;
+}
+
+main > .pressure
+{
+    border: none;
+    width: 50%;
+}
+
+@media only screen and (max-width: 500px)
+{
+    main
+    {
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width: 300px)
+{
+    main
+    {
+        padding: 5px;
+    }
+
+    main > .wind, main > .humidity, main > .pressure
+    {
+        width: 90%;
+    }
+}
