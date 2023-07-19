@@ -4,9 +4,8 @@
 
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
-    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body
@@ -18,15 +17,11 @@ body
 header
 {
     padding: 40px 5px 20px 5px;
-}
-
-.search
-{
     display: flex;
     justify-content: center;
 }
 
-.search button
+header button
 {
     background-color: transparent;
     border: none;
@@ -36,7 +31,7 @@ header
     cursor: pointer;
 }
 
-.search input
+header input
 {
     outline: none;
     border: none;
@@ -47,62 +42,58 @@ header
     font-size: 20px;
 }
 
-.search input::placeholder
+header input::placeholder
 {
     color: rgb(189, 189, 189);
 }
 
-.search input:focus
+header input:focus
 {
     padding-bottom: 9px;
     border-bottom: 2px solid white;
 }
 
-.search input:focus + button
+header input:focus + button
 {
     border-bottom: 2px solid white;
 }
 
-.search input::-webkit-search-cancel-button
+header input::-webkit-search-cancel-button
 {
     display: none;
 }
 
 main
 {
-    box-sizing: border-box;
     display: flex;
-    margin: auto;
-    border-radius: 15px;
     flex-direction: column;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 30px 5px 10px 5px;
     border: 2px solid white;
+    border-radius: 15px;
     width: 400px;
     background: linear-gradient(233deg, rgba(95,126,138,0.8), rgba(73,225,30,0.6));
 }
 
-main
-{
-    padding: 30px 5px 10px 5px;
-}
-
-main > .city
+.city
 {
     font-size: 32px;
     padding-bottom: 10px;
 }
 
-main > .temperature
+.temperature
 {
     font-size: 60px;
 }
 
-main > .temperature-felt
+.temperature-felt
 {
     font-size: 20px;
     padding-bottom: 25px;
 }
 
-main > .wind, main > .humidity, main > .pressure
+.wind, .humidity, .pressure
 {
     padding: 20px 5px 10px 5px; 
     font-size: 28px;
@@ -111,13 +102,13 @@ main > .wind, main > .humidity, main > .pressure
     margin: auto;
 }
 
-main > .pressure
+.pressure
 {
     border: none;
     width: 50%;
 }
 
-@media only screen and (max-width: 500px)
+@media (max-width: 500px)
 {
     main
     {
@@ -125,14 +116,14 @@ main > .pressure
     }
 }
 
-@media only screen and (max-width: 300px)
+@media (max-width: 300px)
 {
     main
     {
         padding: 5px;
     }
 
-    main > .wind, main > .humidity, main > .pressure
+    .wind, .humidity, .pressure
     {
         width: 90%;
     }
