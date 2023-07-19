@@ -24,7 +24,7 @@ $(document).ready(function()
         else
         {
             const data = await response.json();
-            const img = $('<img >', {src : `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`});
+            const img = await $('<img >', {src : `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`});
 
             $('.city').html(data.name);
             $('.cloud').html(img);
